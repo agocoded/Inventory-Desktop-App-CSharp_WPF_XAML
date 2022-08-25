@@ -11,7 +11,7 @@
         WindowStyle="None"
         WindowStartupLocation="CenterScreen"
         Background="Transparent"
-        Title="Forget" Height="760" Width="1000">
+        Title="Forget" Height="760" Width="1400">
     
     <materialDesign:Card UniformCornerRadius="20" Background="{DynamicResource MaterialDesignPaper}" 
      Margin="25" materialDesign:ShadowAssist.ShadowDepth="Depth4">

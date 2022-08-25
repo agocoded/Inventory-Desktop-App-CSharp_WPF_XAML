@@ -65,7 +65,7 @@ namespace Shoprite
         private void loginbtn_Click(object sender, RoutedEventArgs e)
         {
             this.Hide();
-            Screens.Home home = new Screens.Home();
+            Screens.Shop home = new Screens.Shop();
             home.Show();
         }
 

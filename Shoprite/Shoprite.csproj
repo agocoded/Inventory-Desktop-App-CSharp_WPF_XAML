@@ -157,13 +157,24 @@
     <Resource Include="Images\checked.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\bag1.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\head.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\tom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\smile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\fold.png" />
+    <Resource Include="Images\history.png" />
+    <Resource Include="Images\man.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\search-3-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\banner.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.5.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.5.0\build\MaterialDesignThemes.targets')" />

@@ -6,7 +6,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:Shoprite"
         mc:Ignorable="d"
-        Title="Login" Height="760" Width="1000"
+        Title="Login" Height="760" Width="1400"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         Background="{x:Null}" 
         AllowsTransparency="True"

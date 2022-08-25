@@ -30,5 +30,7 @@ namespace Shoprite.Screens
             MainWindow shop = new MainWindow();
             shop.Show();
         }
+
+       
     }
 }

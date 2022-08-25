@@ -11,51 +11,390 @@
         WindowStyle="None"
         WindowStartupLocation="CenterScreen"
         Background="Transparent"
-        Title="Shop" Height="760" Width="1000">
+        Title="Shop" Height="760" Width="1400">
 
     <materialDesign:Card UniformCornerRadius="20" Background="{DynamicResource MaterialDesignPaper}" 
      Margin="25" materialDesign:ShadowAssist.ShadowDepth="Depth4">
 
-        <Grid ShowGridLines="True">
+        <Grid ShowGridLines="False">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="270"/>
                 <ColumnDefinition />
                 <ColumnDefinition  />
                 <ColumnDefinition Width="180"/>
-                <ColumnDefinition Width="250" />
+                <ColumnDefinition Width="350" />
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
-                <RowDefinition Height="80"/>
+                <RowDefinition Height="50" />
+                <RowDefinition  Height="60"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
-            <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center">
+
+            <DockPanel Grid.Column="0" Grid.ColumnSpan="5" Background="#262626" >
+                <Grid ShowGridLines="False" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="150"/>
+                        <ColumnDefinition />
+                        <ColumnDefinition  />
+                        <ColumnDefinition Width="180"/>
+                        <ColumnDefinition Width="350" />
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <Button Content="Discover" Background="{DynamicResource MaterialDesignBackground}" Foreground="{DynamicResource MaterialDesignBody }" 
+                            Width="140" BorderBrush="Transparent" Height="40" materialDesign:ButtonAssist.CornerRadius="10" FontWeight="Bold" FontSize="16"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="40 0 0 0" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" Orientation="Horizontal" VerticalAlignment="Center" >
+
+                        <Button Content="Pickup"  Foreground="White" Width="140" BorderBrush="Transparent" FontWeight="Bold"
+                             Height="40" materialDesign:ButtonAssist.CornerRadius="10" Background="#595959" FontSize="16"/>
+
+                        <TextBlock Margin="200 0 0 0" FontSize="14" FontWeight="Bold" Foreground="White" VerticalAlignment="Center">hope you're enjoying your day  
+                            <Span FontSize="15" FontWeight="Black" FontStyle="Italic" Foreground=" #808080" >staff</Span></TextBlock>
+                        <Image Margin="5 0 0 0" Source="/Images/smile.png" Width="20" Height="20" />
+
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="4" Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <Label Content="+233 24 139 7137" Foreground="{DynamicResource  MaterialDesignBackground}" Background="Transparent"
+                               FontSize="15" FontWeight="Bold"/>
+                        <Label Content="Around the clock" Foreground=" #808080"  Background="Transparent"
+                               FontSize="13" FontWeight="Medium"/>
+                    </StackPanel>
+
+                </Grid>
+            </DockPanel>
+
+
+
+
+
+            <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Center">
                 <Image Source="/Images/lg.png" Width="90" Height="90" RenderTransformOrigin="0.947,0.185" />
-                <Label Content="Shoprite" VerticalAlignment="Center" FontWeight="Bold" FontSize="27" Margin="-13 0 0 0"/>
+
+                <Button Content="shoprite" Foreground="{DynamicResource MaterialDesignBackground }" Width="150" Height="45"
+                             materialDesign:ButtonAssist.CornerRadius="10" FontWeight="Bold" FontSize="25"/>
             </StackPanel>
 
-            <StackPanel Grid.Column="4" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right" >
-                <Image Source="/Images/online-shopping.png" Height="30" Width="60" VerticalAlignment="Center"/>
-                <Image Source="/Images/chat.png" Height="30" Width="30" Margin="10 0 0 0" VerticalAlignment="Center" />
+            <StackPanel Grid.Column="4" Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right" >
+
+                <Button Width="65" Height="50" Background="White" materialDesign:ButtonAssist.CornerRadius="10" BorderBrush="#999999" >
+                    <Image Source="/Images/history.png" Width="50" Height="35" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </Button>
+
+                <Button Margin="20 0 0 0" Width="65" Height="50" Background="White" materialDesign:ButtonAssist.CornerRadius="10"  BorderBrush="#999999" >
+                    <Image Source="/Images/fold.png" Width="50" Height="35" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                </Button>
+
+                <Button Margin="20 0 0 0" Width="65" Height="50" Background="White" materialDesign:ButtonAssist.CornerRadius="10"  BorderBrush="#999999" >
+                    <Image Source="/Images/man.png" Width="50" Height="35" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </Button>
                 <Menu VerticalAlignment="Center" >
-                    <MenuItem Header="Menu" FontWeight="Medium" Margin="10 0 10 0" FontSize="25" Foreground="{DynamicResource MaterialDesignBody}">
-                        <MenuItem Header="Home" FontSize="16"/>
-                        <MenuItem Header="Categories" FontSize="16" />
-                        <MenuItem Header="Logout" Click="logback" FontSize="16"/>
+                    <MenuItem Header="Menu" FontWeight="Medium" Margin="10 0 10 0" FontSize="19" Foreground="{DynamicResource MaterialDesignBody}">
+                        <MenuItem Header="Home" FontSize="15"/>
+                        <MenuItem Header="Categories" FontSize="15" />
+                        <MenuItem Header="Logout" Click="logback" FontSize="15"/>
                     </MenuItem>
                 </Menu>
             </StackPanel>
 
-            <StackPanel Grid.Column="1" Grid.ColumnSpan="3" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center"  >
-                <Button Content="Home " Height="40" Width="90" Background="Transparent" FontSize="17"
-                        Foreground="{DynamicResource MaterialDesignBody}" BorderBrush="Transparent" FontWeight="DemiBold"/>
-                <Button Margin="20 0 0 0" Content="Brand"  Height="40" Width="90" Background="Transparent" FontSize="17"
-                        Foreground="{DynamicResource MaterialDesignBody}" BorderBrush="Transparent"  FontWeight="DemiBold"/>
-                <Button Margin="20 0 0 0" Content="Collections"  Height="40" Width="130" Background="Transparent" FontSize="17"
-                        Foreground="{DynamicResource MaterialDesignBody}" BorderBrush="Transparent" FontWeight="DemiBold"/>
-                <Button Margin="20 0 0 0" Content="Sales"  Height="40" Width="90" Background="Transparent" FontSize="17" 
-                        Foreground="{DynamicResource MaterialDesignBody}" BorderBrush="Transparent"  FontWeight="DemiBold"/>
+            <StackPanel Margin="10 0 10 0" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="1" VerticalAlignment="Center" >
+                <materialDesign:Card UniformCornerRadius="10"  Height="50" Background="#0872df">
+
+                    <Grid ShowGridLines="False" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="640"  />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition  Height="50"  />
+                        </Grid.RowDefinitions>
+
+                        <StackPanel Grid.Column="0" Grid.Row="0"  Width="640" Orientation="Horizontal" Height="44"
+                         VerticalAlignment="Center"  Margin="2 0 0 0" >
+
+
+                            <Border Background="White"  Margin="0 0 0 0" CornerRadius="10" Width="600" Height="40" VerticalAlignment="Center" >
+
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+
+                                    <Label Margin="0 5 0 0" Content="Categories" Foreground="{DynamicResource  MaterialDesignBody }" Width="140" 
+                                     Height="40"  FontSize="16" Background="Transparent" BorderBrush="Transparent" FontWeight="Bold"  />
+
+                                    <TextBox Margin="10 0 0 0" VerticalAlignment="Center" FontSize="15" FontWeight="Bold" Foreground="#0872df" Width="400" >search in market</TextBox>
+                                </StackPanel>
+                            </Border>
+
+                        </StackPanel>
+
+                        <Image Grid.Column="1" Source="/Images/search-3-64.png" Width="40" Height="40" VerticalAlignment="Center" Margin="10 0 0 0" />
+                    </Grid>
+
+
+
+                </materialDesign:Card>
+            </StackPanel>
+
+            <StackPanel  Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="5">
+                <Grid ShowGridLines="False">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="913*"/>
+                        <ColumnDefinition Width="437*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="180" />
+                        <RowDefinition Height="65"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Grid.Row="0"  Grid.ColumnSpan="2" Orientation="Horizontal" VerticalAlignment="Center"  HorizontalAlignment="Center" >
+                        <Image Source="/Images/banner.png" Width="1200" Height="150" />
+                    </StackPanel>
+                    
+
+                    <StackPanel Grid.Row="1"  Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" >
+                        <Label Content="Popular" FontSize="35" FontWeight="Bold" HorizontalAlignment="Left" />
+                        <Label Content="See All" FontSize="20" FontWeight="Bold" HorizontalAlignment="Right" 
+                               Foreground="#0872df" VerticalAlignment="Center" Margin="1000 0 0 0"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="2" Grid.Column="0" Height="355" Orientation="Vertical" Grid.ColumnSpan="2">
+
+                        <Grid ShowGridLines="False" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="200" />
+                                <ColumnDefinition Width="200"/>
+                                <ColumnDefinition Width="200"/>
+                                <ColumnDefinition Width="200"/>
+                                <ColumnDefinition Width="200"/>
+                                <ColumnDefinition Width="200"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="175"/>
+                                <RowDefinition Height="175"/>
+                            </Grid.RowDefinitions>
+
+                            
+                            <materialDesign:Card UniformCornerRadius="10" Grid.Column="0" Grid.Row="0"
+                               materialDesign:ShadowAssist.ShadowDepth="Depth2" Margin="5 0 0 5" >
+                                <StackPanel>
+                                    <Image Source="/Images/tom.png" Width="150" Height="110"/>
+                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                        <Label Content="Items Left" FontSize="13" FontWeight="Medium" />
+                                        
+                                        <TextBlock Margin="02 0 0 0" VerticalAlignment="Center" FontSize="17" FontWeight="Bold">
+                                            59
+                                        </TextBlock>
+                                        
+                                    </StackPanel>
+                                    <Button Content="Update"  Width="80" Height="25" materialDesign:ButtonAssist.CornerRadius="10" Margin="0 3 0 0"/>
+                                </StackPanel>
+                            </materialDesign:Card>
+                            
+
+                            <materialDesign:Card UniformCornerRadius="10" Grid.Column="0" Grid.Row="1"
+                               materialDesign:ShadowAssist.ShadowDepth="Depth2" Margin="5 0 0 0" >
+                                <StackPanel>
+                                    <Image Source="/Images/tom.png" Width="150" Height="110"/>
+                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                        <Label Content="Items Left" FontSize="13" FontWeight="Medium" />
+
+                                        <TextBlock Margin="02 0 0 0" VerticalAlignment="Center" FontSize="17" FontWeight="Bold">
+                                            59
+                                        </TextBlock>
+
+                                    </StackPanel>
+                                    <Button Content="Update"  Width="80" Height="25" materialDesign:ButtonAssist.CornerRadius="10" Margin="0 3 0 0"/>
+                                </StackPanel>
+                            </materialDesign:Card>
+
+                            <materialDesign:Card UniformCornerRadius="10" Grid.Column="1" Grid.Row="1"
+                               materialDesign:ShadowAssist.ShadowDepth="Depth2" Margin="5 0 0 0" >
+                                <StackPanel>
+                                    <Image Source="/Images/tom.png" Width="150" Height="110"/>
+                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                        <Label Content="Items Left" FontSize="13" FontWeight="Medium" />
+
+                                        <TextBlock Margin="02 0 0 0" VerticalAlignment="Center" FontSize="17" FontWeight="Bold">
+                                            59
+                                        </TextBlock>
+
+                                    </StackPanel>
+
+                                    <Button Content="Update"  Width="80" Height="25" materialDesign:ButtonAssist.CornerRadius="10" Margin="0 3 0 0"/>
+                                </StackPanel>
+                            </materialDesign:Card>
+
+                            <materialDesign:Card UniformCornerRadius="10" Grid.Column="1" Grid.Row="0"
+                               materialDesign:ShadowAssist.ShadowDepth="Depth2" Margin="5 0 0 5" >
+                                <StackPanel>
+                                    <Image Source="/Images/tom.png" Width="150" Height="110"/>
+                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                        <Label Content="Items Left" FontSize="13" FontWeight="Medium" />
+
+                                        <TextBlock Margin="02 0 0 0" VerticalAlignment="Center" FontSize="17" FontWeight="Bold">
+                                            59
+                                        </TextBlock>
+
+                                    </StackPanel>
+                                    <Button Content="Update"  Width="80" Height="25" materialDesign:ButtonAssist.CornerRadius="10" Margin="0 3 0 0"/>
+                                </StackPanel>
+                            </materialDesign:Card>
+                            
+
+                            <materialDesign:Card UniformCornerRadius="10" Grid.Column="2" Grid.Row="0"
+                               materialDesign:ShadowAssist.ShadowDepth="Depth2" Margin="5 0 0 5" >
+                                <StackPanel>
+                                    <Image Source="/Images/tom.png" Width="150" Height="110"/>
+                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                        <Label Content="Items Left" FontSize="13" FontWeight="Medium" />
+
+                                        <TextBlock Margin="02 0 0 0" VerticalAlignment="Center" FontSize="17" FontWeight="Bold">
+                                            59
+                                        </TextBlock>
+
+                                    </StackPanel>
+                                    <Button Content="Update"  Width="80" Height="25" materialDesign:ButtonAssist.CornerRadius="10" Margin="0 3 0 0"/>
+                                </StackPanel>
+                            </materialDesign:Card>
+                            
+
+                            <materialDesign:Card UniformCornerRadius="10" Grid.Column="2" Grid.Row="1"
+                               materialDesign:ShadowAssist.ShadowDepth="Depth2" Margin="5 0 0 0" >
+                                <StackPanel>
+                                    <Image Source="/Images/tom.png" Width="150" Height="110"/>
+                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                        <Label Content="Items Left" FontSize="13" FontWeight="Medium" />
+
+                                        <TextBlock Margin="02 0 0 0" VerticalAlignment="Center" FontSize="17" FontWeight="Bold">
+                                            59
+                                        </TextBlock>
+
+                                    </StackPanel>
+                                    <Button Content="Update"  Width="80" Height="25" materialDesign:ButtonAssist.CornerRadius="10" Margin="0 3 0 0"/>
+                                </StackPanel>
+                            </materialDesign:Card>
+                            
+
+                            <materialDesign:Card UniformCornerRadius="10" Grid.Column="3" Grid.Row="0"
+                               materialDesign:ShadowAssist.ShadowDepth="Depth2" Margin="5 0 0 5" >
+                                <StackPanel>
+                                    <Image Source="/Images/tom.png" Width="150" Height="110"/>
+                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                        <Label Content="Items Left" FontSize="13" FontWeight="Medium" />
+
+                                        <TextBlock Margin="02 0 0 0" VerticalAlignment="Center" FontSize="17" FontWeight="Bold">
+                                            59
+                                        </TextBlock>
+
+                                    </StackPanel>
+                                    <Button Content="Update"  Width="80" Height="25" materialDesign:ButtonAssist.CornerRadius="10" Margin="0 3 0 0"/>
+                                </StackPanel>
+                            </materialDesign:Card>
+                            
+
+                            <materialDesign:Card UniformCornerRadius="10" Grid.Column="3" Grid.Row="1"
+                               materialDesign:ShadowAssist.ShadowDepth="Depth2" Margin="5 0 0 0" >
+                                <StackPanel>
+                                    <Image Source="/Images/tom.png" Width="150" Height="110"/>
+                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                        <Label Content="Items Left" FontSize="13" FontWeight="Medium" />
+
+                                        <TextBlock Margin="02 0 0 0" VerticalAlignment="Center" FontSize="17" FontWeight="Bold">
+                                            59
+                                        </TextBlock>
+
+                                    </StackPanel>
+                                    <Button Content="Update"  Width="80" Height="25" materialDesign:ButtonAssist.CornerRadius="10" Margin="0 3 0 0"/>
+                                </StackPanel>
+                            </materialDesign:Card>
+                            
+
+                            <materialDesign:Card UniformCornerRadius="10" Grid.Column="4" Grid.Row="0"
+                               materialDesign:ShadowAssist.ShadowDepth="Depth2" Margin="5 0 0 5" >
+                                <StackPanel>
+                                    <Image Source="/Images/tom.png" Width="150" Height="110"/>
+                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                        <Label Content="Items Left" FontSize="13" FontWeight="Medium" />
+
+                                        <TextBlock Margin="02 0 0 0" VerticalAlignment="Center" FontSize="17" FontWeight="Bold">
+                                            59
+                                        </TextBlock>
+
+                                    </StackPanel>
+                                    <Button Content="Update"  Width="80" Height="25" materialDesign:ButtonAssist.CornerRadius="10" Margin="0 3 0 0"/>
+                                </StackPanel>
+                            </materialDesign:Card>
+                            
+
+                            <materialDesign:Card UniformCornerRadius="10" Grid.Column="4" Grid.Row="1"
+                               materialDesign:ShadowAssist.ShadowDepth="Depth2" Margin="5 0 0 0" >
+                                <StackPanel>
+                                    <Image Source="/Images/tom.png" Width="150" Height="110"/>
+                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                        <Label Content="Items Left" FontSize="13" FontWeight="Medium" />
+
+                                        <TextBlock Margin="02 0 0 0" VerticalAlignment="Center" FontSize="17" FontWeight="Bold">
+                                            59
+                                        </TextBlock>
+
+                                    </StackPanel>
+                                    <Button Content="Update"  Width="80" Height="25" materialDesign:ButtonAssist.CornerRadius="10" Margin="0 3 0 0"/>
+                                </StackPanel>
+                            </materialDesign:Card>
+
+                            <materialDesign:Card UniformCornerRadius="10" Grid.Column="5" Grid.Row="0"
+                               materialDesign:ShadowAssist.ShadowDepth="Depth2" Margin="5 0 0 5" >
+                                <StackPanel>
+                                    <Image Source="/Images/tom.png" Width="150" Height="110"/>
+                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                        <Label Content="Items Left" FontSize="13" FontWeight="Medium" />
+
+                                        <TextBlock Margin="02 0 0 0" VerticalAlignment="Center" FontSize="17" FontWeight="Bold">
+                                            59
+                                        </TextBlock>
+
+                                    </StackPanel>
+                                    <Button Content="Update"  Width="80" Height="25" materialDesign:ButtonAssist.CornerRadius="10" Margin="0 3 0 0"/>
+                                </StackPanel>
+                            </materialDesign:Card>
+
+                            <materialDesign:Card UniformCornerRadius="10" Grid.Column="5" Grid.Row="1"
+                               materialDesign:ShadowAssist.ShadowDepth="Depth2" Margin="5 0 0 0" >
+                                <StackPanel>
+                                    <Image Source="/Images/tom.png" Width="150" Height="110"/>
+                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                        <Label Content="Items Left" FontSize="13" FontWeight="Medium" />
+
+                                        <TextBlock Margin="02 0 0 0" VerticalAlignment="Center" FontSize="17" FontWeight="Bold">
+                                            59
+                                        </TextBlock>
+
+                                    </StackPanel>
+                                    <Button Content="Update"  Width="80" Height="25" materialDesign:ButtonAssist.CornerRadius="10" Margin="0 3 0 0"/>
+                                </StackPanel>
+                            </materialDesign:Card>
+
+                            <Border Grid.Column="6" Grid.Row="0" Grid.RowSpan="2" Background="Black" >
+
+                            </Border>
+
+                        </Grid>
+
+                    </StackPanel>
+
+                </Grid>
             </StackPanel>
 
 
