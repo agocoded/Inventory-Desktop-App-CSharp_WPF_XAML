@@ -14,18 +14,17 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MaterialDesignThemes.Wpf;
 
-namespace Shoprite
+namespace Shoprite.Screens
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Admin.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Admin : Window
     {
-        public MainWindow()
+        public Admin()
         {
             InitializeComponent();
         }
-
 
         private void exitApp(object sender, RoutedEventArgs e)
         {
@@ -69,24 +68,10 @@ namespace Shoprite
             home.Show();
         }
 
-        private void fgtpass_Cli(object sender, RoutedEventArgs e)
+        private void user_Click(object sender, RoutedEventArgs e)
         {
             this.Hide();
-            Screens.Forget home = new Screens.Forget();
-            home.Show();
-        }
-
-        private void create(object sender, RoutedEventArgs e)
-        {
-            this.Hide();
-            Screens.newUser home = new Screens.newUser();
-            home.Show();
-        }
-
-        private void adminbtn_Click(object sender, RoutedEventArgs e)
-        {
-            this.Hide();
-            Screens.Admin he = new Screens.Admin();
+            MainWindow he = new MainWindow();
             he.Show();
         }
     }

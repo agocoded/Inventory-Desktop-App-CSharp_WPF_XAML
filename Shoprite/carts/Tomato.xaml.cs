@@ -12,14 +12,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Shoprite.Screens
+namespace Shoprite.carts
 {
     /// <summary>
-    /// Interaction logic for Shop.xaml
+    /// Interaction logic for Tomato.xaml
     /// </summary>
-    public partial class Shop : Window
+    public partial class Tomato : Window
     {
-        public Shop()
+        public Tomato()
         {
             InitializeComponent();
         }
@@ -31,14 +31,7 @@ namespace Shoprite.Screens
             shop.Show();
         }
 
-        private void upd_toma(object sender, RoutedEventArgs e)
-        {
-            this.Hide();
-            carts.Tomato home = new carts.Tomato();
-            home.Show();
-        }
-
-        private void back(object sender, RoutedEventArgs e)
+        private void goback(object sender, RoutedEventArgs e)
         {
             this.Hide();
             Screens.Shop home = new Screens.Shop();

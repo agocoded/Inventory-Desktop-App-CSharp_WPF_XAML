@@ -29,3 +29,7 @@ C:\Users\CODED\source\repos\Shoprite\Shoprite\obj\Debug\Screens\newUser.g.cs
 C:\Users\CODED\source\repos\Shoprite\Shoprite\obj\Debug\Screens\newUser.baml
 C:\Users\CODED\source\repos\Shoprite\Shoprite\obj\Debug\Screens\Shop.g.cs
 C:\Users\CODED\source\repos\Shoprite\Shoprite\obj\Debug\Screens\Shop.baml
+C:\Users\CODED\source\repos\Shoprite\Shoprite\obj\Debug\carts\Tomato.g.cs
+C:\Users\CODED\source\repos\Shoprite\Shoprite\obj\Debug\carts\Tomato.baml
+C:\Users\CODED\source\repos\Shoprite\Shoprite\obj\Debug\Screens\Admin.g.cs
+C:\Users\CODED\source\repos\Shoprite\Shoprite\obj\Debug\Screens\Admin.baml
