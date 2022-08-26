@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MaterialDesignThemes.Wpf;
+using MySql.Data.MySqlClient;
 
 namespace Shoprite.Screens
 {
@@ -21,8 +22,28 @@ namespace Shoprite.Screens
     /// </summary>
     public partial class Admin : Window
     {
+        /// <summary>
+        /// initializing all variables needed for mysql conn
+        /// </summary>
+        private MySqlConnection conn;
+        private string server;
+        private string database;
+        private string uid;
+        private string password;
         public Admin()
         {
+
+            server = "localhost";
+            database = "shoprite";
+            uid = "root";
+            password = "";
+
+            String connString;
+            connString = $"SERVER={server};DATABASE={database};UID={uid};PASSWORD={password};";
+
+            conn = new MySqlConnection(connString);
+
+
             InitializeComponent();
         }
 
@@ -60,12 +81,27 @@ namespace Shoprite.Screens
         }
 
 
-
         private void loginbtn_Click(object sender, RoutedEventArgs e)
         {
-            this.Hide();
-            Screens.Shop home = new Screens.Shop();
-            home.Show();
+            string user = txtUsername.Text;
+            string pass = txtPassword.Password;
+
+            if (Islogin(user, pass))
+            {
+                MessageBox.Show($"Welcome {txtUsername.Text} ");
+
+                this.Hide();
+                Screens.AdminScreen ho = new Screens.AdminScreen();
+                ho.Show();
+            }
+            else if (txtUsername.Text.Equals(""))
+            {
+                MessageBox.Show("Please fill all fields");
+            }
+            else
+            {
+                MessageBox.Show($"Admin logins is incorrect");
+            }
         }
 
         private void user_Click(object sender, RoutedEventArgs e)
@@ -73,6 +109,68 @@ namespace Shoprite.Screens
             this.Hide();
             MainWindow he = new MainWindow();
             he.Show();
+        }
+
+
+        private bool openConnection()
+        {
+            try
+            {
+                conn.Open();
+                return true;
+            }
+            catch (MySqlException e)
+            {
+                switch (e.Number)
+                {
+                    case 0:
+                        MessageBox.Show("connection to server failed");
+                        break;
+                    case 1045:
+                        MessageBox.Show("Server username or password incorrect");
+                        break;
+                }
+                return false;
+            }
+        }
+
+
+        public bool Islogin(string user, string pass)
+        {
+            string query = $"SELECT * FROM users WHERE `username`='{user}' AND `password`='{pass}' AND `role`='admin'";
+
+            try
+            {
+                if (openConnection())
+                {
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        reader.Close();
+                        conn.Close();
+                        return true;
+                    }
+                    else
+                    {
+                        reader.Close();
+                        conn.Close();
+                        return false;
+                    }
+                }
+                else
+                {
+                    conn.Close();
+                    return false;
+                }
+            }
+            catch (Exception e)
+            {
+                conn.Close();
+                return false;
+
+            }
         }
     }
 }

@@ -32,7 +32,7 @@
             </Grid.RowDefinitions>
 
 
-            <DockPanel Grid.Column="0" Grid.ColumnSpan="5" Background="#262626" >
+            <Border Grid.Column="0" Grid.ColumnSpan="5" Background="#fec10e" CornerRadius="10" >
                 <Grid ShowGridLines="False" >
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="150"/>
@@ -54,7 +54,7 @@
                     <StackPanel Margin="40 0 0 0" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" Orientation="Horizontal" VerticalAlignment="Center" >
 
                         <Button Content="Pickup"  Foreground="White" Width="140" BorderBrush="Transparent" FontWeight="Bold"
-                             Height="40" materialDesign:ButtonAssist.CornerRadius="10" Background="#595959" FontSize="16"/>
+                             Height="40" materialDesign:ButtonAssist.CornerRadius="10" Background="#eb1a2d" FontSize="16"/>
 
                         <TextBlock Margin="200 0 0 0" FontSize="14" FontWeight="Bold" Foreground="White" VerticalAlignment="Center">hope you're enjoying your day  
                             <Span FontSize="15" FontWeight="Black" FontStyle="Italic" Foreground=" #808080" >staff</Span></TextBlock>
@@ -70,7 +70,7 @@
                     </StackPanel>
 
                 </Grid>
-            </DockPanel>
+            </Border>
 
 
 
@@ -79,25 +79,25 @@
             <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Center">
                 <Image Source="/Images/lg.png" Width="90" Height="90" RenderTransformOrigin="0.947,0.185" />
 
-                <Button Content="shoprite" Foreground="{DynamicResource MaterialDesignBackground }" Width="150" Height="45"
-                             materialDesign:ButtonAssist.CornerRadius="10" FontWeight="Bold" FontSize="25"/>
+                <Button Content="shoprite" Foreground="{DynamicResource MaterialDesignBackground }" Width="150" Height="45" BorderBrush="Transparent"
+                             materialDesign:ButtonAssist.CornerRadius="10" FontWeight="Bold" FontSize="25" Background="#fec10e"/>
             </StackPanel>
 
             <StackPanel Grid.Column="4" Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right" >
 
-                <Button Width="65" Height="50" Background="White" materialDesign:ButtonAssist.CornerRadius="10" BorderBrush="#999999" >
+                <Button Width="60" Height="40" Background="White" materialDesign:ButtonAssist.CornerRadius="10" BorderBrush="#999999" >
                     <Image Source="/Images/history.png" Width="50" Height="35" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                 </Button>
 
-                <Button Margin="20 0 0 0" Width="65" Height="50" Background="White" materialDesign:ButtonAssist.CornerRadius="10"  BorderBrush="#999999" >
+                <Button Margin="20 0 0 0" Width="60" Height="40" Background="White" materialDesign:ButtonAssist.CornerRadius="10"  BorderBrush="#999999" >
                     <Image Source="/Images/fold.png" Width="50" Height="35" VerticalAlignment="Center" HorizontalAlignment="Center" />
                 </Button>
 
-                <Button Margin="20 0 0 0" Width="65" Height="50" Background="White" materialDesign:ButtonAssist.CornerRadius="10"  BorderBrush="#999999" >
+                <Button Margin="20 0 0 0" Width="60" Height="40" Background="White" materialDesign:ButtonAssist.CornerRadius="10"  BorderBrush="#999999" >
                     <Image Source="/Images/man.png" Width="50" Height="35" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                 </Button>
                 <Menu VerticalAlignment="Center" >
-                    <MenuItem Header="Menu" FontWeight="Medium" Margin="10 0 10 0" FontSize="19" Foreground="{DynamicResource MaterialDesignBody}">
+                    <MenuItem Foreground="#eb1a2d" Header="Menu" FontWeight="Medium" Margin="05 0 10 0" FontSize="20">
                         <MenuItem Click="back" Header="Home" FontSize="15"/>
                         <MenuItem Header="Categories" FontSize="15" />
                         <MenuItem Header="Logout" Click="logback" FontSize="15"/>
@@ -106,7 +106,7 @@
             </StackPanel>
 
             <StackPanel Margin="10 0 10 0" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="1" VerticalAlignment="Center" >
-                <materialDesign:Card UniformCornerRadius="10"  Height="50" Background="#2196f3">
+                <materialDesign:Card UniformCornerRadius="10"  Height="50" Background="{DynamicResource MaterialDesignBody}">
 
                     <Grid ShowGridLines="False" >
                         <Grid.ColumnDefinitions>
@@ -129,7 +129,7 @@
                                     <Label Margin="0 5 0 0" Content="Categories" Foreground="{DynamicResource  MaterialDesignBody }" Width="140" 
                                      Height="40"  FontSize="16" Background="Transparent" BorderBrush="Transparent" FontWeight="Bold"  />
 
-                                    <TextBox Margin="10 0 0 0" VerticalAlignment="Center" FontSize="15" FontWeight="Bold" Foreground="#2196f3" Width="400" >search in market</TextBox>
+                                    <TextBox Margin="10 0 0 0" VerticalAlignment="Center" FontSize="15" FontWeight="Bold" Foreground="#eb1a2d" Width="400" >search in market</TextBox>
                                 </StackPanel>
                             </Border>
 

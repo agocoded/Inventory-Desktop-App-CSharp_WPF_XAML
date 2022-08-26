@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MaterialDesignThemes.Wpf;
+using MySql.Data.MySqlClient;
 
 namespace Shoprite
 {
@@ -21,8 +22,29 @@ namespace Shoprite
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        /// <summary>
+        /// initializing all variables needed for mysql conn
+        /// </summary>
+        private MySqlConnection conn;
+        private string server;
+        private string database;
+        private string uid;
+        private string password;
+
         public MainWindow()
         {
+            server = "localhost";
+            database = "shoprite";
+            uid = "root";
+            password = "";
+
+            String connString;
+            connString = $"SERVER={server};DATABASE={database};UID={uid};PASSWORD={password};";
+
+            conn = new MySqlConnection(connString);
+
+
             InitializeComponent();
         }
 
@@ -31,6 +53,7 @@ namespace Shoprite
         {
             Application.Current.Shutdown();
         }
+
         public bool IsDarkTheme { get; set; }
         public Uri Source { get; private set; }
 
@@ -64,9 +87,25 @@ namespace Shoprite
 
         private void loginbtn_Click(object sender, RoutedEventArgs e)
         {
-            this.Hide();
-            Screens.Shop home = new Screens.Shop();
-            home.Show();
+            string user = txtUsername.Text;
+            string pass = txtPassword.Password;
+
+            if (Islogin(user, pass))
+            {
+                MessageBox.Show($"Welcome {txtUsername.Text} ");
+
+                this.Hide();
+                Screens.Shop ho = new Screens.Shop();
+                ho.Show();
+            }
+            else if (txtUsername.Text.Equals(""))
+            {
+                MessageBox.Show("Please fill all fields");
+            }
+            else
+            {
+                MessageBox.Show($"User does not exist or password incorrect");
+            }
         }
 
         private void fgtpass_Cli(object sender, RoutedEventArgs e)
@@ -88,6 +127,70 @@ namespace Shoprite
             this.Hide();
             Screens.Admin he = new Screens.Admin();
             he.Show();
+        }
+
+
+
+
+        private bool openConnection()
+        {
+            try
+            {
+                conn.Open();
+                return true;
+            }
+            catch (MySqlException e)
+            {
+                switch (e.Number)
+                {
+                    case 0:
+                        MessageBox.Show("connection to server failed");
+                        break;
+                    case 1045:
+                        MessageBox.Show("Server username or password incorrect");
+                        break;
+                }
+                return false;
+            }
+        }
+
+
+        public bool Islogin(string user, string pass)
+        {
+            string query = $"SELECT * FROM users WHERE `username`='{user}' AND `password`='{pass}'";
+
+            try
+            {
+                if (openConnection())
+                {
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        reader.Close();
+                        conn.Close();
+                        return true;
+                    }
+                    else
+                    {
+                        reader.Close();
+                        conn.Close();
+                        return false;
+                    }
+                }
+                else
+                {
+                    conn.Close();
+                    return false;
+                }
+            }
+            catch (Exception e)
+            {
+                conn.Close();
+                return false;
+
+            }
         }
     }
 }

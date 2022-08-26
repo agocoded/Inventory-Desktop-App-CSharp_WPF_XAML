@@ -43,6 +43,7 @@
     <Reference Include="MaterialDesignThemes.Wpf, Version=4.5.0.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialDesignThemes.4.5.0\lib\net452\MaterialDesignThemes.Wpf.dll</HintPath>
     </Reference>
+    <Reference Include="MySql.Data, Version=8.0.30.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -68,6 +69,9 @@
     </Compile>
     <Compile Include="Screens\Admin.xaml.cs">
       <DependentUpon>Admin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\AdminScreen.xaml.cs">
+      <DependentUpon>AdminScreen.xaml</DependentUpon>
     </Compile>
     <Compile Include="Screens\Forget.xaml.cs">
       <DependentUpon>Forget.xaml</DependentUpon>
@@ -98,6 +102,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Screens\Admin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Screens\AdminScreen.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -144,9 +152,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Studio 37 Logo.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\logo.png" />
@@ -197,7 +202,6 @@
     <Resource Include="Images\blucir.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\antonino-visalli-RNiBLy7aHck-unsplash.jpg" />
     <Resource Include="Images\rr.png" />
   </ItemGroup>
   <ItemGroup>

@@ -156,7 +156,7 @@
                         <RowDefinition/>
                     </Grid.RowDefinitions>
 
-                    <StackPanel Grid.Column="0" Grid.Row="0" Background="White" Width="1000" Height="600">
+                    <StackPanel Grid.Column="0" Grid.Row="0"  Width="1000" Height="600">
 
                         <Grid ShowGridLines="False" Width="900" Margin="0 10 0 0">
                             <Grid.ColumnDefinitions>
@@ -170,7 +170,7 @@
                                 <RowDefinition Height="50"/>
                                 <RowDefinition Height="50" />
                                 <RowDefinition Height="2"/>
-                                <RowDefinition Height="70"/>
+                                <RowDefinition Height="80"/>
                                 <RowDefinition Height="398"/>
                             </Grid.RowDefinitions>
 
@@ -238,8 +238,8 @@
                             </StackPanel>
 
 
-                            <TextBox x:Name="txtquan" FontSize="20" Grid.Column="0" Grid.Row="3"  materialDesign:HintAssist.Hint="number" BorderThickness="2" BorderBrush="{ DynamicResource MaterialDesignDivider}"  
-                                     HorizontalAlignment="Center" Height="60" Width="100" VerticalAlignment="Center" Style="{StaticResource MaterialDesignOutlinedTextBox}" />
+                            <TextBox x:Name="txtquan" FontSize="18" Grid.Column="0" Grid.Row="3"  materialDesign:HintAssist.Hint="number" BorderThickness="1" BorderBrush="{ DynamicResource MaterialDesignDivider}"  
+                                     HorizontalAlignment="Center" Height="60" Width="140" VerticalAlignment="Center" Style="{StaticResource MaterialDesignOutlinedTextBox}" />
 
 
                             <StackPanel Grid.Column="1" Grid.Row="3"  VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Center">
