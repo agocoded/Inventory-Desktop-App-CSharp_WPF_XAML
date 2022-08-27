@@ -64,7 +64,7 @@
                     <StackPanel Grid.Column="4" Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
                         <Label Content="+233 24 139 7137" Foreground="{DynamicResource  MaterialDesignBackground}" Background="Transparent"
                                FontSize="15" FontWeight="Bold"/>
-                        <Label Content="Around the clock" Foreground=" #eb1a2d"  Background="Transparent"
+                        <Label Content="Around the clock" Foreground="#FF116D94"  Background="Transparent"
                                FontSize="13" FontWeight="Medium"/>
                     </StackPanel>
 
@@ -87,14 +87,12 @@
                         <RowDefinition Height="250"/>
                     </Grid.RowDefinitions>
 
-                    <StackPanel Grid.Column="0" Grid.RowSpan="2" Background="#fec10e" Height="660" Grid.ColumnSpan="2" >
-
-                        <Border>
-                        </Border>
+                    <StackPanel Grid.Column="0" Grid.RowSpan="2" Background="#FF116D94" Height="660" Grid.ColumnSpan="2" Visibility="Visible" Opacity="0.7" >
+                        
                         <StackPanel Margin="20 0 0 0" Orientation="Horizontal">
                             <Image Source="/Images/bag.png" Width="40" Height="50" />
-                            <Menu  HorizontalAlignment="Center">
-                                <MenuItem Foreground="Black" Header="Menu" FontWeight="Bold"  FontSize="20">
+                            <Menu  HorizontalAlignment="Left" >
+                                <MenuItem Foreground="White" Background="#FF116D94" Header="Menu" FontWeight="Bold"  FontSize="20">
                                     <MenuItem Click="back" Header="Home" FontSize="15"/>
                                     <MenuItem Header="Account" FontSize="15" />
                                     <MenuItem Header="Logout" Click="logback" FontSize="15"/>
@@ -102,9 +100,9 @@
                             </Menu>
                         </StackPanel>
 
-                        <StackPanel Margin="20 10 0 0" Orientation="Horizontal" VerticalAlignment="Center" >
+                        <StackPanel Margin="20 0 0 0" Orientation="Horizontal" VerticalAlignment="Center" >
                             <Image Source="/Images/bag.png" Width="40" Height="50" />
-                            <Label  Foreground="Black" 
+                            <Label  Foreground="White" 
                                    Content="Dashboard" FontSize="22" FontWeight="Bold" />
                         </StackPanel>
 
@@ -211,13 +209,75 @@
                     </StackPanel>
 
 
-                    <StackPanel Grid.Column="3" Grid.Row="0" Background="BurlyWood" Grid.ColumnSpan="3">
-                        <Label FontSize="100" Content="ListView" />
+                    <StackPanel Grid.Column="3" Grid.Row="0"  Grid.ColumnSpan="3">
+                        
+                        <StackPanel Orientation="Horizontal" Height="50" Margin="0 10 0 0 " Width="740">
+
+                            <Button   materialDesign:ShadowAssist.ShadowDepth="Depth1" Height="40" Width="160" Background="#fec10e"                      
+                                materialDesign:ButtonAssist.CornerRadius="10" FontSize="19" Content="Refresh" Click="view" BorderBrush="Transparent" />
+
+                            <Button Margin="10 0 0 0" materialDesign:ShadowAssist.ShadowDepth="Depth1" Height="40" Width="160" Background="#FF116D94"                         
+                                materialDesign:ButtonAssist.CornerRadius="10" FontSize="19" Content="Update" Click="update" BorderBrush="Transparent" />
+
+                            <Button Margin="10 0 0 0" materialDesign:ShadowAssist.ShadowDepth="Depth1" Height="40" Width="160" Background="#fec10e"                        
+                                materialDesign:ButtonAssist.CornerRadius="10" FontSize="19" Content="Add" Click="add" BorderBrush="Transparent" />
+
+                            <Button Margin="10 0 0 0" materialDesign:ShadowAssist.ShadowDepth="Depth1" Height="40" Width="135" Background="#eb1a2d"                      
+                                materialDesign:ButtonAssist.CornerRadius="10" FontSize="19" Content="Drop by id" Click="remove" BorderBrush="Transparent" />
+
+                            <TextBox  Width="60" Height="40" Margin="10 0 0 0" FontSize="20" materialDesign:HintAssist.Hint="ID" BorderThickness="2"
+                                          Foreground="White"   Opacity="0.7"   VerticalAlignment="Center"   x:Name="idx"              
+                                         BorderBrush="Transparent" Style="{StaticResource MaterialDesignTextBox}" Background="#FF116D94"/>
+
+                        </StackPanel>
+
+                        <StackPanel  Margin="0 10 0 0" Orientation="Horizontal" Width="750" VerticalAlignment="Center" Height="330" >
+
+                            <DataGrid Background="{DynamicResource MaterialDesignBackground}" Foreground="{DynamicResource MaterialDesignBody}" 
+                                      Margin="20 0 0 0" ItemsSource="{Binding}" Name="dataGrid" Width="520" Height="320" VerticalAlignment="Center" />
+
+                            <StackPanel Width="210" VerticalAlignment="Center">
+                                
+                                <TextBox  Width="150" Margin="0 07 0 0" FontSize="15" materialDesign:HintAssist.Hint="type" BorderThickness="2"
+                                          Foreground="White"   Opacity="0.7"  Name="typex"                     
+                                         BorderBrush="Transparent" Style="{StaticResource MaterialDesignTextBox}" Background="#FF116D94"/>
+
+                                <TextBox  Width="150" Margin="0 7 0 0" FontSize="15" materialDesign:HintAssist.Hint="item" BorderThickness="2"
+                                          Foreground="White"   Opacity="0.7"     Name="itemx"                  
+                                         BorderBrush="Transparent" Style="{StaticResource MaterialDesignTextBox}" Background="#FF116D94"/>
+
+                                <TextBox  Width="150" Margin="0 7 0 0" FontSize="15" materialDesign:HintAssist.Hint="quantity" BorderThickness="2"
+                                          Foreground="White"    Opacity="0.7"     Name="quatityx"              
+                                         BorderBrush="Transparent" Style="{StaticResource MaterialDesignTextBox}" Background="#FF116D94"/>
+
+                                <TextBox  Width="150" Margin="0 07 0 0" FontSize="15" materialDesign:HintAssist.Hint="price" BorderThickness="2"
+                                          Foreground="White"    Opacity="0.7"   Name="pricex"                    
+                                         BorderBrush="Transparent" Style="{StaticResource MaterialDesignTextBox}" Background="#FF116D94"/>
+
+                                <TextBox  Width="150" Margin="0 7 0 0" FontSize="15" materialDesign:HintAssist.Hint="sold" BorderThickness="2"
+                                          Foreground="White"    Opacity="0.7"   Name="soldx"                    
+                                         BorderBrush="Transparent" Style="{StaticResource MaterialDesignTextBox}" Background="#FF116D94"/>
+
+                                <TextBox  Width="150" Margin="0 7 0 0" FontSize="15" materialDesign:HintAssist.Hint="amount" BorderThickness="2"
+                                         Foreground="White"    Opacity="0.7"    Name="amountx"                   
+                                         BorderBrush="Transparent" Style="{StaticResource MaterialDesignTextBox}" Background="#FF116D94"/>
+
+
+                            </StackPanel>
+                            
+                        </StackPanel>
+                        
                     </StackPanel>
 
 
-                    <StackPanel Grid.Column="2" Background="Yellow" Height="250" Grid.ColumnSpan="4" Grid.Row="1">
-                        <Label FontSize="50" Content="Sales History" />
+                    <StackPanel Grid.Column="2"  Grid.ColumnSpan="4" Grid.Row="1" Orientation="Horizontal">
+                        <Button Margin="80 0 90 0" materialDesign:ShadowAssist.ShadowDepth="Depth1" Height="70" Width="200" Background="#eb1a2d"                      
+                         Click="view_sales"   materialDesign:ButtonAssist.CornerRadius="10" FontSize="20" Content="View Sale History"  BorderBrush="Transparent" />
+
+
+                        <DataGrid Background="#fec10e" Foreground="#fff" Opacity="0.7" Name="sales"
+                                      Margin="00 0 0 0" ItemsSource="{Binding}" Width="575" Height="200" VerticalAlignment="Center" />
+
                     </StackPanel>
 
                 </Grid>
