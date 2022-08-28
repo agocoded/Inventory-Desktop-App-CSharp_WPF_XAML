@@ -106,7 +106,7 @@
             </StackPanel>
 
             <StackPanel Margin="10 0 10 0" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="1" VerticalAlignment="Center" >
-                <materialDesign:Card UniformCornerRadius="10"  Height="50" Background="{DynamicResource MaterialDesignBody}">
+                <materialDesign:Card UniformCornerRadius="10"  Height="50" Background="#FF116D94">
 
                     <Grid ShowGridLines="False" >
                         <Grid.ColumnDefinitions>
@@ -256,38 +256,47 @@
                                        Foreground="{DynamicResource MaterialDesignBackground}" />
 
                                 <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
-                                    <Label Margin="15 0 0 0" Content="Subtotal" FontSize="17" Foreground="{DynamicResource MaterialDesignBackground}" VerticalAlignment="Center" />
-                                    <Label Margin="143 0 0 0" Content="$" FontSize="14"  FontWeight="Bold" Foreground="{DynamicResource MaterialDesignBackground}" VerticalAlignment="Center" />
-                                    <TextBlock Text="12" FontSize="15"  Foreground="{DynamicResource MaterialDesignBackground}" VerticalAlignment="Center"  />
+                                    <Label Margin="15 0 0 0" Content="Type" FontSize="17" Foreground="{DynamicResource MaterialDesignBackground}" VerticalAlignment="Center" />
+                                    <Label Margin="139 0 0 0" Content="$" FontSize="14"  FontWeight="Bold" Foreground="{DynamicResource MaterialDesignBackground}" VerticalAlignment="Center" />
+                                    <TextBlock Text="00" FontSize="15"  Foreground="{DynamicResource MaterialDesignBackground}" VerticalAlignment="Center"  />
                                 </StackPanel>
 
                                 <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
-                                    <Label Margin="15 0 0 0" Content="VAT" FontSize="17" Foreground="{DynamicResource MaterialDesignBackground}" VerticalAlignment="Center" />
-                                    <Label Margin="178 0 0 0" Content="$" FontSize="14"  FontWeight="Bold" Foreground="{DynamicResource MaterialDesignBackground}" VerticalAlignment="Center" />
-                                    <TextBlock Text="12" FontSize="15"  Foreground="{DynamicResource MaterialDesignBackground}" VerticalAlignment="Center"  />
+                                    <Label Margin="15 0 0 0" Content="Item" FontSize="17" Foreground="{DynamicResource MaterialDesignBackground}" VerticalAlignment="Center" />
+                                    <Label Margin="140 0 0 0" Content="$" FontSize="14"  FontWeight="Bold" Foreground="{DynamicResource MaterialDesignBackground}" VerticalAlignment="Center" />
+                                    <TextBlock Text="00" FontSize="15"  Foreground="{DynamicResource MaterialDesignBackground}" VerticalAlignment="Center"  />
                                 </StackPanel>
 
                                 <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
-                                    <Label Margin="15 0 0 0" Content="Discount" FontSize="17" Foreground="{DynamicResource MaterialDesignBackground}" VerticalAlignment="Center" />
-                                    <Label Margin="140 0 0 0" Content="$" FontSize="14"  FontWeight="Bold" Foreground="{DynamicResource MaterialDesignBackground}" VerticalAlignment="Center" />
-                                    <TextBlock Text="12" FontSize="15"  Foreground="{DynamicResource MaterialDesignBackground}" VerticalAlignment="Center"  />
+                                    <Label Margin="15 0 0 0" Content="Mode" FontSize="17" Foreground="{DynamicResource MaterialDesignBackground}" VerticalAlignment="Center" />
+                                    <Label Margin="130 0 0 0" Content="$" FontSize="14"  FontWeight="Bold" Foreground="{DynamicResource MaterialDesignBackground}" VerticalAlignment="Center" />
+                                    <TextBlock Text="00" FontSize="15"  Foreground="{DynamicResource MaterialDesignBackground}" VerticalAlignment="Center"  />
                                 </StackPanel>
 
-                                <StackPanel Orientation="Horizontal" Margin="0 0 0 30">
-                                    <Label Margin="15 0 0 0" Content="Shipping" FontSize="17" Foreground="{DynamicResource MaterialDesignBackground}" VerticalAlignment="Center" />
-                                    <Label Margin="140 0 0 0" Content="$" FontSize="14"  FontWeight="Bold" Foreground="{DynamicResource MaterialDesignBackground}" VerticalAlignment="Center" />
-                                    <TextBlock Text="12" FontSize="15"  Foreground="{DynamicResource MaterialDesignBackground}" VerticalAlignment="Center"  />
+                                <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                                    <Label Margin="15 0 0 0" Content="Quantity" FontSize="17" Foreground="{DynamicResource MaterialDesignBackground}" VerticalAlignment="Center" />
+                                    <Label Margin="110 0 0 0" Content="$" FontSize="14"  FontWeight="Bold" Foreground="{DynamicResource MaterialDesignBackground}" VerticalAlignment="Center" />
+                                    <TextBlock Text="00" FontSize="15"  Foreground="{DynamicResource MaterialDesignBackground}" VerticalAlignment="Center"  />
+                                </StackPanel>
+                                
+                                 <StackPanel Orientation="Horizontal" Margin="0 0 0 20">
+                                    <Label Margin="15 0 0 0" Content="Price" FontSize="17" Foreground="{DynamicResource MaterialDesignBackground}" VerticalAlignment="Center" />
+                                    <Label Margin="138 0 0 0" Content="$" FontSize="14"  FontWeight="Bold" Foreground="{DynamicResource MaterialDesignBackground}" VerticalAlignment="Center" />
+                                    <TextBlock Text="00" FontSize="15"  Foreground="{DynamicResource MaterialDesignBackground}" VerticalAlignment="Center"  />
                                 </StackPanel>
 
-                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 0 0 60">
+
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 0 0 30">
                                     <Label  Content="Total" FontSize="20" FontWeight="Bold" Foreground="{DynamicResource MaterialDesignBackground}" VerticalAlignment="Center" />
-                                    <Label Margin="160 0 0 0" Content="$" FontSize="17"  FontWeight="Bold" Foreground="{DynamicResource MaterialDesignBackground}" VerticalAlignment="Center" />
-                                    <TextBlock Text="12" FontSize="17" FontWeight="Bold" Foreground="{DynamicResource MaterialDesignBackground}" VerticalAlignment="Center"  />
+                                    <Label Margin="100 0 0 0" Content="$" FontSize="17"  FontWeight="Bold" Foreground="{DynamicResource MaterialDesignBackground}" VerticalAlignment="Center" />
+                                    <TextBlock Text="00" FontSize="17" FontWeight="Bold" Foreground="{DynamicResource MaterialDesignBackground}" VerticalAlignment="Center"  />
                                 </StackPanel>
+
+                                
 
                                 <Border Width="230" Height="65" CornerRadius="20" Background="{DynamicResource MaterialDesignBackground}" >
                                     <Button Background="Transparent"  BorderBrush="Transparent" Height="65" Click="check"
-                                            FontSize="28" FontWeight="Bold" Content="Checkout" Foreground="#FF116D94"/>
+                                            FontSize="30" FontWeight="Bold" Content="Checkout" Foreground="#FF116D94"/>
 
                                 </Border>
 

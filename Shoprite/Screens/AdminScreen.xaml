@@ -16,7 +16,7 @@
     <materialDesign:Card UniformCornerRadius="20" Background="{DynamicResource MaterialDesignPaper}" 
      Margin="25" materialDesign:ShadowAssist.ShadowDepth="Depth4">
 
-        <Grid ShowGridLines="True">
+        <Grid ShowGridLines="False">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="270"/>
                 <ColumnDefinition />
@@ -276,7 +276,7 @@
 
 
                         <DataGrid Background="#fec10e" Foreground="#fff" Opacity="0.7" Name="sales"
-                                      Margin="00 0 0 0" ItemsSource="{Binding}" Width="575" Height="200" VerticalAlignment="Center" />
+                                      Margin="00 0 0 0" ItemsSource="{Binding}" Width="675" Height="200" VerticalAlignment="Center" />
 
                     </StackPanel>
 

@@ -39,6 +39,8 @@ namespace Shoprite.Screens
 
             conn = new MySqlConnection(connString);
 
+
+            /// initialisation starts here
             InitializeComponent();
         }
 

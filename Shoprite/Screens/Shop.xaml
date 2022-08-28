@@ -162,9 +162,9 @@
                     
 
                     <StackPanel Grid.Row="1"  Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" >
-                        <Label Content="Popular" FontSize="35" FontWeight="Bold" HorizontalAlignment="Left" />
-                        <Label Content="See All" FontSize="20" FontWeight="Bold" HorizontalAlignment="Right" 
-                               Foreground="#2196f3" VerticalAlignment="Center" Margin="1000 0 0 0"/>
+                        <Label Content="Popular Products" FontSize="35" FontWeight="Bold" HorizontalAlignment="Left" />
+                        <Label Content="See All" FontSize="22" FontWeight="Bold" HorizontalAlignment="Right" 
+                               Foreground="#2196f3" VerticalAlignment="Center" Margin="970 0 0 0"/>
                     </StackPanel>
 
                     <StackPanel Grid.Row="2" Grid.Column="0" Height="355" Orientation="Vertical" Grid.ColumnSpan="2">
@@ -386,8 +386,16 @@
                                 </StackPanel>
                             </materialDesign:Card>
 
-                            <Border Grid.Column="6" Grid.Row="0" Grid.RowSpan="2" Background="Black" >
+                            <Border Grid.Column="6" Grid.Row="0" Margin="10 0 10 0" Grid.RowSpan="2" CornerRadius="20" Height="350" Background="#fec10e" >
+                                <StackPanel HorizontalAlignment="Center">
+                                    <Label Margin="0 30 0 0" Content="it is" Foreground="White"  FontWeight="Bold" FontSize="23"/>
+                                    <Label Content="sale day" Foreground="White"  FontWeight="Bold" FontSize="23"/>
 
+                                    <Button Margin="0 20 0 0" Content="input sales" FontSize="15" FontWeight="Black" Foreground="red" Background="White" 
+                                           Click="nav"  BorderBrush="Transparent" materialDesign:ButtonAssist.CornerRadius="10" Height="40" Width="115"/>
+
+                                    <Image Margin="0 20 0 0" Source="/Images/money.png" Width="100" Height="120" />
+                                </StackPanel>
                             </Border>
 
                         </Grid>

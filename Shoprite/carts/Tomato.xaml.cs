@@ -100,29 +100,48 @@ namespace Shoprite.carts
 
         private void check(object sender, RoutedEventArgs e)
         {
-            string type = typex.Text;
-            string item = itemx.Text;
-            int quantity = int.Parse(quantityx.Text);
-            string mode = modex.Text;
-            int price = int.Parse(pricex.Text);
+            if (true)
+            {
+                string type = typex.Text;
+                string item = itemx.Text;
+                int quantity = int.Parse(quantityx.Text);
+                string mode = modex.Text;
+                int price = int.Parse(pricex.Text);
 
-            DateTime now = DateTime.Now;
-            string date = now.ToString("yyyy-MM-dd");
-
-
-            conn.Open();
-            string query = $"INSERT INTO `sales`(`id`, `type`, `item`, `mode`, `quantity`, `price`, `date`) VALUES ('','{type}','{item}','{mode}','{quantity}','{price}','{date}')";
-            MySqlCommand cmd = new MySqlCommand(query, conn);
-            int value = cmd.ExecuteNonQuery();
-            MessageBox.Show($"Trasaction sale recorded successfully ");
-            conn.Close();
+                DateTime now = DateTime.Now;
+                string date = now.ToString("yyyy-MM-dd");
 
 
-            typex.Text = "";
-            itemx.Text = "";
-            quantityx.Text = "";
-            modex.Text = "";
-            pricex.Text = "";
+                conn.Open();
+                string query = $"INSERT INTO `sales`(`id`, `type`, `item`, `mode`, `quantity`, `price`, `date`) VALUES ('','{type}','{item}','{mode}','{quantity}','{price}','{date}')";
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                int value = cmd.ExecuteNonQuery();
+                MessageBox.Show($"Trasaction sale recorded successfully ");
+                conn.Close();
+
+
+                typex.Text = "";
+                itemx.Text = "";
+                quantityx.Text = "";
+                modex.Text = "";
+                pricex.Text = "";
+            }
+
+
+            if(true)
+            {
+                string query = $"SELECT * FROM sales";
+
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+
+                conn.Open();
+                DataTable dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+                conn.Close();
+
+                sales.DataContext = dt;
+            }
+
 
         }
 

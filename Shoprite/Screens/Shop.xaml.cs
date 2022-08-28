@@ -44,5 +44,12 @@ namespace Shoprite.Screens
             Screens.Shop home = new Screens.Shop();
             home.Show();
         }
+
+        private void nav(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            carts.Tomato home = new carts.Tomato();
+            home.Show();
+        }
     }
 }
