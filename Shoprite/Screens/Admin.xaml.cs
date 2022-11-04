@@ -22,6 +22,10 @@ namespace Shoprite.Screens
     /// </summary>
     public partial class Admin : Window
     {
+
+        public static Admin instace;
+        public TextBox txtBox;
+
         /// <summary>
         /// initializing all variables needed for mysql conn
         /// </summary>
@@ -45,6 +49,9 @@ namespace Shoprite.Screens
 
 
             InitializeComponent();
+
+            instace = this;
+            txtBox = txtUsername;
         }
 
         private void exitApp(object sender, RoutedEventArgs e)

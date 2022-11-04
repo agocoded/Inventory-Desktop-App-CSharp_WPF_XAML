@@ -206,7 +206,7 @@
                             <materialDesign:Card UniformCornerRadius="10" Grid.Column="0" Grid.Row="1"
                                materialDesign:ShadowAssist.ShadowDepth="Depth2" Margin="5 0 0 0" >
                                 <StackPanel>
-                                    <Image Source="/Images/tom.png" Width="150" Height="110"/>
+                                    <Image Source="/Images/acc.png" Width="150" Height="110"/>
                                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
                                         <Label Content="Items Left" FontSize="13" FontWeight="Medium" />
 
@@ -239,7 +239,7 @@
                             <materialDesign:Card UniformCornerRadius="10" Grid.Column="1" Grid.Row="0"
                                materialDesign:ShadowAssist.ShadowDepth="Depth2" Margin="5 0 0 5" >
                                 <StackPanel>
-                                    <Image Source="/Images/tom.png" Width="150" Height="110"/>
+                                    <Image Source="/Images/sho.png" Width="150" Height="110"/>
                                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
                                         <Label Content="Items Left" FontSize="13" FontWeight="Medium" />
 
@@ -256,7 +256,7 @@
                             <materialDesign:Card UniformCornerRadius="10" Grid.Column="2" Grid.Row="0"
                                materialDesign:ShadowAssist.ShadowDepth="Depth2" Margin="5 0 0 5" >
                                 <StackPanel>
-                                    <Image Source="/Images/tom.png" Width="150" Height="110"/>
+                                    <Image Source="/Images/clo.png" Width="150" Height="110"/>
                                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
                                         <Label Content="Items Left" FontSize="13" FontWeight="Medium" />
 
@@ -273,7 +273,7 @@
                             <materialDesign:Card UniformCornerRadius="10" Grid.Column="2" Grid.Row="1"
                                materialDesign:ShadowAssist.ShadowDepth="Depth2" Margin="5 0 0 0" >
                                 <StackPanel>
-                                    <Image Source="/Images/tom.png" Width="150" Height="110"/>
+                                    <Image Source="/Images/piz.png" Width="150" Height="110"/>
                                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
                                         <Label Content="Items Left" FontSize="13" FontWeight="Medium" />
 
@@ -290,7 +290,7 @@
                             <materialDesign:Card UniformCornerRadius="10" Grid.Column="3" Grid.Row="0"
                                materialDesign:ShadowAssist.ShadowDepth="Depth2" Margin="5 0 0 5" >
                                 <StackPanel>
-                                    <Image Source="/Images/tom.png" Width="150" Height="110"/>
+                                    <Image Source="/Images/sta.png" Width="150" Height="110"/>
                                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
                                         <Label Content="Items Left" FontSize="13" FontWeight="Medium" />
 
@@ -307,7 +307,7 @@
                             <materialDesign:Card UniformCornerRadius="10" Grid.Column="3" Grid.Row="1"
                                materialDesign:ShadowAssist.ShadowDepth="Depth2" Margin="5 0 0 0" >
                                 <StackPanel>
-                                    <Image Source="/Images/tom.png" Width="150" Height="110"/>
+                                    <Image Source="/Images/acc.png" Width="150" Height="110"/>
                                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
                                         <Label Content="Items Left" FontSize="13" FontWeight="Medium" />
 
@@ -324,7 +324,7 @@
                             <materialDesign:Card UniformCornerRadius="10" Grid.Column="4" Grid.Row="0"
                                materialDesign:ShadowAssist.ShadowDepth="Depth2" Margin="5 0 0 5" >
                                 <StackPanel>
-                                    <Image Source="/Images/tom.png" Width="150" Height="110"/>
+                                    <Image Source="/Images/food.png" Width="150" Height="110"/>
                                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
                                         <Label Content="Items Left" FontSize="13" FontWeight="Medium" />
 
@@ -341,7 +341,7 @@
                             <materialDesign:Card UniformCornerRadius="10" Grid.Column="4" Grid.Row="1"
                                materialDesign:ShadowAssist.ShadowDepth="Depth2" Margin="5 0 0 0" >
                                 <StackPanel>
-                                    <Image Source="/Images/tom.png" Width="150" Height="110"/>
+                                    <Image Source="/Images/sho.png" Width="150" Height="110"/>
                                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
                                         <Label Content="Items Left" FontSize="13" FontWeight="Medium" />
 
@@ -357,7 +357,7 @@
                             <materialDesign:Card UniformCornerRadius="10" Grid.Column="5" Grid.Row="0"
                                materialDesign:ShadowAssist.ShadowDepth="Depth2" Margin="5 0 0 5" >
                                 <StackPanel>
-                                    <Image Source="/Images/tom.png" Width="150" Height="110"/>
+                                    <Image Source="/Images/piz.png" Width="150" Height="110"/>
                                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
                                         <Label Content="Items Left" FontSize="13" FontWeight="Medium" />
 

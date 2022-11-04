@@ -22,7 +22,9 @@
                 <ColumnDefinition />
                 <ColumnDefinition  />
                 <ColumnDefinition Width="180"/>
-                <ColumnDefinition Width="350" />
+                <ColumnDefinition Width="41.99" />
+                <ColumnDefinition Width="241.782"/>
+                <ColumnDefinition Width="66.228"/>
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
@@ -31,7 +33,7 @@
             </Grid.RowDefinitions>
 
 
-            <Border CornerRadius="10" Grid.Column="0" Grid.ColumnSpan="5" Background="#fec10e" >
+            <Border CornerRadius="10" Grid.Column="0" Grid.ColumnSpan="7" Background="#fec10e" >
                 <Grid ShowGridLines="False" >
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="150"/>
@@ -71,7 +73,7 @@
                 </Grid>
             </Border>
 
-            <StackPanel  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5"  >
+            <StackPanel  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="7"  >
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="32.692"/>
@@ -83,35 +85,36 @@
                     </Grid.ColumnDefinitions>
 
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="410"/>
+                        <RowDefinition Height="158.333"/>
+                        <RowDefinition Height="251.667"/>
                         <RowDefinition Height="250"/>
                     </Grid.RowDefinitions>
 
-                    <StackPanel Grid.Column="0" Grid.RowSpan="2" Background="#FF116D94" Height="660" Grid.ColumnSpan="2" Visibility="Visible" Opacity="0.7" >
-                        
-                        <StackPanel Margin="20 0 0 0" Orientation="Horizontal">
-                            <Image Source="/Images/bag.png" Width="40" Height="50" />
-                            <Menu  HorizontalAlignment="Left" >
-                                <MenuItem Foreground="White" Background="#FF116D94" Header="Menu" FontWeight="Bold"  FontSize="20">
-                                    <MenuItem Click="back" Header="Home" FontSize="15"/>
-                                    <MenuItem Header="Account" FontSize="15" />
-                                    <MenuItem Header="Logout" Click="logback" FontSize="15"/>
-                                </MenuItem>
-                            </Menu>
-                        </StackPanel>
+                    <StackPanel Grid.Column="0" Grid.RowSpan="3" Background="#FF116D94" Height="660" Grid.ColumnSpan="2" Visibility="Visible" Opacity="0.7" >
 
-                        <StackPanel Margin="20 0 0 0" Orientation="Horizontal" VerticalAlignment="Center" >
-                            <Image Source="/Images/bag.png" Width="40" Height="50" />
-                            <Label  Foreground="White" 
-                                   Content="Dashboard" FontSize="22" FontWeight="Bold" />
-                        </StackPanel>
+                        <Menu  HorizontalAlignment="Left"  Margin="30 0 0 0" >
+                            <MenuItem Foreground="White" Background="#FF116D94" Header="Menu" FontWeight="Bold"  FontSize="22">
+                                <MenuItem Click="back" Header="Home" FontSize="15"/>
+                                <MenuItem Header="Account" FontSize="15" />
+                                <MenuItem Header="Logout" Click="logback" FontSize="15"/>
+                            </MenuItem>
+                        </Menu>
+
+
+                        <Button Margin="0 0 0 0 "  FontWeight="Bold" Background="Transparent" BorderBrush="Transparent"
+                        materialDesign:ShadowAssist.ShadowDepth="Depth1" Height="53" Width="180" HorizontalAlignment="Left"
+                        materialDesign:ButtonAssist.CornerRadius="10" FontSize="22" Content="Analytics" />
+
+                        <Button Margin="-25 0 0 0 "  FontWeight="Bold" Background="Transparent" BorderBrush="Transparent"
+                        materialDesign:ShadowAssist.ShadowDepth="Depth1" Height="53" Width="180" HorizontalAlignment="Left"
+                        materialDesign:ButtonAssist.CornerRadius="10" FontSize="22" Content="Tills" Click="gotoTill"  />
 
                     </StackPanel>
 
 
 
 
-                    <StackPanel Grid.Column="2" Grid.Row="0" >
+                    <StackPanel Grid.Column="2" Grid.Row="0" Grid.RowSpan="2" >
 
                         <StackPanel HorizontalAlignment="Center">
 
@@ -119,7 +122,8 @@
 
                                 <Grid  Margin="20 20 0 0">
                                     <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="230"/>
+                                        <ColumnDefinition Width="115"/>
+                                        <ColumnDefinition Width="100" />
                                         <ColumnDefinition/>
                                     </Grid.ColumnDefinitions>
 
@@ -127,18 +131,27 @@
                                         <RowDefinition/>
                                     </Grid.RowDefinitions>
 
-                                    <StackPanel Grid.Column="0" >
-                                        <Label Content="Sales" FontSize="14" FontWeight="DemiBold" Foreground="White"/>
+                                    <StackPanel Grid.Column="0" VerticalAlignment="Center">
+                                        <Label HorizontalAlignment="Center" Content="Attendants" FontSize="17" FontWeight="DemiBold" Foreground="White"/>
 
-                                        <TextBlock FontSize="18" FontWeight="Bold" Foreground="White">
-                                            <Span>$10680.09</Span>
+                                        <TextBlock HorizontalAlignment="Center" FontSize="25" FontWeight="Bold" Foreground="White" Name="users">
+                                            10
                                         </TextBlock>
 
-                                        <Label Content="Accounts on sales " FontSize="14" FontWeight="DemiBold" Foreground="White"/>
                                     </StackPanel>
 
-                                    <Image Grid.Column="1" Source="/Images/bag.png"  Margin="0 0 0 0"
-                                           Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                                    <StackPanel Grid.Column="1" Margin="15 0 0 0" VerticalAlignment="Center" >
+                                        <Label HorizontalAlignment="Center" Content="Admins" FontSize="17" FontWeight="DemiBold" Foreground="White"/>
+
+                                        <TextBlock HorizontalAlignment="Center" FontSize="25" FontWeight="Bold" Foreground="White" Name="admins">
+                                            2
+                                        </TextBlock>
+
+
+                                    </StackPanel>
+
+                                    <Image Grid.Column="2" Source="/Images/bag.png"  Margin="0 0 0 0"
+                                           Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
 
                                 </Grid>
@@ -161,10 +174,10 @@
                                         <Label Content="Sales" FontSize="14" FontWeight="DemiBold" Foreground="White"/>
 
                                         <TextBlock FontSize="18" FontWeight="Bold" Foreground="White">
-                                            <Span>$10680.09</Span>
+                                            <Span>$</Span>1068<Span>.00</Span>
                                         </TextBlock>
 
-                                        <Label Content="Accounts on sales " FontSize="14" FontWeight="DemiBold" Foreground="White"/>
+                                        <Label Content="amount made so far " FontSize="14" FontWeight="DemiBold" Foreground="White"/>
                                     </StackPanel>
 
                                     <Image Grid.Column="1" Source="/Images/bag.png"  Margin="0 0 0 0"
@@ -188,13 +201,13 @@
                                     </Grid.RowDefinitions>
 
                                     <StackPanel Grid.Column="0" >
-                                        <Label Content="Sales" FontSize="14" FontWeight="DemiBold" Foreground="White"/>
+                                        <Label Content="Tills " FontSize="14" FontWeight="DemiBold" Foreground="White"/>
 
-                                        <TextBlock FontSize="18" FontWeight="Bold" Foreground="White">
-                                            <Span>$10680.09</Span>
+                                        <TextBlock FontSize="18" FontWeight="Bold" Foreground="White" Name="total_tills">
+                                            2
                                         </TextBlock>
 
-                                        <Label Content="Accounts on sales " FontSize="14" FontWeight="DemiBold" Foreground="White"/>
+                                        <Label Content="total tills" FontSize="14" FontWeight="DemiBold" Foreground="White"/>
                                     </StackPanel>
 
                                     <Image Grid.Column="1" Source="/Images/bag.png"  Margin="0 0 0 0"
@@ -209,12 +222,12 @@
                     </StackPanel>
 
 
-                    <StackPanel Grid.Column="3" Grid.Row="0"  Grid.ColumnSpan="3">
-                        
+                    <StackPanel Grid.Column="3" Grid.Row="0"  Grid.ColumnSpan="3" Grid.RowSpan="2">
+
                         <StackPanel Orientation="Horizontal" Height="50" Margin="0 10 0 0 " Width="740">
 
                             <Button   materialDesign:ShadowAssist.ShadowDepth="Depth1" Height="40" Width="160" Background="#fec10e"                      
-                                materialDesign:ButtonAssist.CornerRadius="10" FontSize="19" Content="Refresh" Click="view" BorderBrush="Transparent" />
+                                materialDesign:ButtonAssist.CornerRadius="10" FontSize="19" Content="Refresh" Click="views" BorderBrush="Transparent" />
 
                             <Button Margin="10 0 0 0" materialDesign:ShadowAssist.ShadowDepth="Depth1" Height="40" Width="160" Background="#FF116D94"                         
                                 materialDesign:ButtonAssist.CornerRadius="10" FontSize="19" Content="Update" Click="update" BorderBrush="Transparent" />
@@ -237,7 +250,7 @@
                                       Margin="20 0 0 0" ItemsSource="{Binding}" Name="dataGrid" Width="520" Height="320" VerticalAlignment="Center" />
 
                             <StackPanel Width="210" VerticalAlignment="Center">
-                                
+
                                 <TextBox  Width="150" Margin="0 07 0 0" FontSize="15" materialDesign:HintAssist.Hint="type" BorderThickness="2"
                                           Foreground="White"   Opacity="0.7"  Name="typex"                     
                                          BorderBrush="Transparent" Style="{StaticResource MaterialDesignTextBox}" Background="#FF116D94"/>
@@ -264,15 +277,15 @@
 
 
                             </StackPanel>
-                            
+
                         </StackPanel>
-                        
+
                     </StackPanel>
 
 
-                    <StackPanel Grid.Column="2"  Grid.ColumnSpan="4" Grid.Row="1" Orientation="Horizontal">
+                    <StackPanel Grid.Column="2"  Grid.ColumnSpan="4" Grid.Row="2" Orientation="Horizontal">
                         <Button Margin="80 0 90 0" materialDesign:ShadowAssist.ShadowDepth="Depth1" Height="70" Width="200" Background="#eb1a2d"                      
-                         Click="view_sales"   materialDesign:ButtonAssist.CornerRadius="10" FontSize="20" Content="View Sale History"  BorderBrush="Transparent" />
+                         Click="view_sales"   materialDesign:ButtonAssist.CornerRadius="10" FontSize="20" Content="Sales History"  BorderBrush="Transparent" />
 
 
                         <DataGrid Background="#fec10e" Foreground="#fff" Opacity="0.7" Name="sales"

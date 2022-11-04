@@ -64,6 +64,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="carts\Tills.xaml.cs">
+      <DependentUpon>Tills.xaml</DependentUpon>
+    </Compile>
     <Compile Include="carts\Tomato.xaml.cs">
       <DependentUpon>Tomato.xaml</DependentUpon>
     </Compile>
@@ -85,6 +88,10 @@
     <Compile Include="Screens\Shop.xaml.cs">
       <DependentUpon>Shop.xaml</DependentUpon>
     </Compile>
+    <Page Include="carts\Tills.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="carts\Tomato.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -209,6 +216,14 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\acc.png" />
+    <Resource Include="Images\clo.png" />
+    <Resource Include="Images\food.png" />
+    <Resource Include="Images\piz.png" />
+    <Resource Include="Images\sho.png" />
+    <Resource Include="Images\sta.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.5.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.5.0\build\MaterialDesignThemes.targets')" />

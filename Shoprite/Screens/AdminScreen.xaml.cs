@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using Shoprite.carts;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -42,7 +43,72 @@ namespace Shoprite.Screens
 
             /// initialisation starts here
             InitializeComponent();
+
+            if (true)
+            {
+                string query = "SELECT COUNT(*) FROM `users` WHERE `role`='admin' ";
+                conn.Open();
+                MySqlCommand comman = new MySqlCommand(query, conn);
+                int rows = Convert.ToInt32(comman.ExecuteScalar());
+                admins.Text = rows.ToString();
+                conn.Close();
+
+            }
+
+            if (true)
+            {
+
+                string query = $"SELECT * FROM category";
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+
+                conn.Open();
+                DataTable dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+                conn.Close();
+
+                dataGrid.DataContext = dt;
+            }
+
+            if (true)
+            {
+                string query = "SELECT COUNT(*) FROM `users` WHERE `role`='attendant' ";
+                conn.Open();
+                MySqlCommand comman = new MySqlCommand(query, conn);
+                int rows = Convert.ToInt32(comman.ExecuteScalar());
+                users.Text = rows.ToString();
+                conn.Close();
+
+            }
+
+            if (true)
+            {
+                string query = "SELECT COUNT(*) FROM `tills`";
+                conn.Open();
+                MySqlCommand comman = new MySqlCommand(query, conn);
+                int rows = Convert.ToInt32(comman.ExecuteScalar());
+                total_tills.Text = rows.ToString();
+                conn.Close();
+
+            }
+
+            if (true)
+            {
+                string query = $"SELECT * FROM sales";
+
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+
+                conn.Open();
+                DataTable dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+                conn.Close();
+
+                sales.DataContext = dt;
+            }
+
+
+
         }
+
 
         private void logback(object sender, RoutedEventArgs e)
         {
@@ -65,20 +131,61 @@ namespace Shoprite.Screens
             home.Show();
         }
 
-        private void view(object sender, RoutedEventArgs e)
+        private void views(object sender, RoutedEventArgs e)
         {
-            string query = $"SELECT * FROM category";
+            if (true)
+            {
 
-            MySqlCommand cmd = new MySqlCommand(query, conn);
+                string query = $"SELECT * FROM category";
 
-            conn.Open();
-            DataTable dt = new DataTable();
-            dt.Load(cmd.ExecuteReader());
-            conn.Close();
+                MySqlCommand cmd = new MySqlCommand(query, conn);
 
-            dataGrid.DataContext = dt;
+                conn.Open();
+                DataTable dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+                conn.Close();
+
+                dataGrid.DataContext = dt;
+            }
+
+            if (true)
+            {
+                string query = "SELECT COUNT(*) FROM `users` WHERE `role`='attendant' ";
+                conn.Open();
+                MySqlCommand comman = new MySqlCommand(query, conn);
+                int rows = Convert.ToInt32(comman.ExecuteScalar());
+                users.Text = rows.ToString();
+                conn.Close();
+
+            }
+
+            if (true)
+            {
+                string query = "SELECT COUNT(*) FROM `tills`";
+                conn.Open();
+                MySqlCommand comman = new MySqlCommand(query, conn);
+                int rows = Convert.ToInt32(comman.ExecuteScalar());
+                total_tills.Text = rows.ToString();
+                conn.Close();
+
+            }
+
+            if (true)
+            {
+                string query = "SELECT COUNT(*) FROM `users` WHERE `role`='admin' ";
+                conn.Open();
+                MySqlCommand comman = new MySqlCommand(query, conn);
+                int rows = Convert.ToInt32(comman.ExecuteScalar());
+                admins.Text = rows.ToString();
+
+                conn.Close();
+
+            }
+
+            
 
         }
+
 
         private void update(object sender, RoutedEventArgs e)
         {
@@ -171,6 +278,13 @@ namespace Shoprite.Screens
             conn.Close();
 
             sales.DataContext = dt;
+        }
+
+        private void gotoTill(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+            Tills home = new Tills();
+            home.Show();
         }
     }
 }

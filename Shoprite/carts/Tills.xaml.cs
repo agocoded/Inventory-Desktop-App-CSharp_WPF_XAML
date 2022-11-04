@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿
+using MySql.Data.MySqlClient;
 using Shoprite.Screens;
 using System;
 using System.Collections.Generic;
@@ -20,7 +21,7 @@ namespace Shoprite.carts
     /// <summary>
     /// Interaction logic for Tomato.xaml
     /// </summary>
-    public partial class Tomato : Window
+    public partial class Tills : Window
     {
         private MySqlConnection conn;
         private string server;
@@ -28,7 +29,7 @@ namespace Shoprite.carts
         private string uid;
         private string password;
 
-        public Tomato()
+        public Tills()
         {
             server = "localhost";
             database = "shoprite";
@@ -43,9 +44,9 @@ namespace Shoprite.carts
 
             InitializeComponent();
 
-            if(true)
+            if (true)
             {
-                string query = $"SELECT * FROM sales";
+                string query = $"SELECT * FROM tills";
 
                 MySqlCommand cmd = new MySqlCommand(query, conn);
 
@@ -79,37 +80,28 @@ namespace Shoprite.carts
 
         private void update(object sender, RoutedEventArgs e)
         {
-            string type = typex.Text;
-            string item = itemx.Text;
-            int quantity = int.Parse(quantityx.Text);
-            string mode = modex.Text;
-            int id = int.Parse(idx.Text);
-            int price = int.Parse(pricex.Text);
+           
 
             DateTime now = DateTime.Now;
             string date = now.ToString("yyyy-MM-dd");
 
             /// INSERT INTO `sales`(`id`, `type`, `item`, `mode`, `quantity`, `price`, `date`) VALUES ('','Phone','13 pro max','cash','2','200','2022-08-23')
 
-            conn.Open();
-            string query = $"UPDATE `sales` SET `type`='{type}',`item`='{item}',`mode`='{mode}',`quantity`='{quantity}',`price`='{price}',`date`='{date}' WHERE `id`='{id}'";
-            MySqlCommand cmd = new MySqlCommand(query, conn);
-            int value = cmd.ExecuteNonQuery();
-            MessageBox.Show($"ID number {id} is UPDATED SUCCESSFULLY");
-            conn.Close();
+            /// conn.Open();
+            /// string query = $"UPDATE `sales` SET `type`='{type}',`item`='{item}',`mode`='{mode}',`quantity`='{quantity}',`price`='{price}',`date`='{date}' WHERE `id`='{id}'";
+            /// MySqlCommand cmd = new MySqlCommand(query, conn);
+            /// int value = cmd.ExecuteNonQuery();
+            /// MessageBox.Show($"ID number {id} is UPDATED SUCCESSFULLY");
+            /// conn.Close();
 
 
-            typex.Text = "";
-            itemx.Text = "";
-            quantityx.Text = "";
-            modex.Text = "";
-            idx.Text = "";
+            
         }
 
         private void back(object sender, RoutedEventArgs e)
         {
             this.Hide();
-            Screens.Shop home = new Screens.Shop();
+            AdminScreen home = new AdminScreen();
             home.Show();
         }
 
@@ -117,33 +109,25 @@ namespace Shoprite.carts
         {
             if (true)
             {
-                string type = typex.Text;
-                string item = itemx.Text;
-                int quantity = int.Parse(quantityx.Text);
-                string mode = modex.Text;
-                int price = int.Parse(pricex.Text);
+                
 
                 DateTime now = DateTime.Now;
                 string date = now.ToString("yyyy-MM-dd");
 
 
-                conn.Open();
-                string query = $"INSERT INTO `sales`(`id`, `type`, `item`, `mode`, `quantity`, `price`, `date`) VALUES ('','{type}','{item}','{mode}','{quantity}','{price}','{date}')";
-                MySqlCommand cmd = new MySqlCommand(query, conn);
-                int value = cmd.ExecuteNonQuery();
-                MessageBox.Show($"Trasaction sale recorded successfully ");
-                conn.Close();
+                ///conn.Open();
+                ///string query = $"INSERT INTO `sales`(`id`, `type`, `item`, `mode`, `quantity`, `price`, `date`) VALUES ('','{type}','{item}','{mode}','{quantity}','{price}','{date}')";
+                ///MySqlCommand cmd = new MySqlCommand(query, conn);
+                ///int value = cmd.ExecuteNonQuery();
+                ///MessageBox.Show($"Trasaction sale recorded successfully ");
+                ///conn.Close();
 
 
-                typex.Text = "";
-                itemx.Text = "";
-                quantityx.Text = "";
-                modex.Text = "";
-                pricex.Text = "";
+                
             }
 
 
-            if(true)
+            if (true)
             {
                 string query = $"SELECT * FROM sales";
 
@@ -162,7 +146,7 @@ namespace Shoprite.carts
 
         private void refresh(object sender, RoutedEventArgs e)
         {
-            string query = $"SELECT * FROM sales";
+            string query = $"SELECT * FROM tills";
 
             MySqlCommand cmd = new MySqlCommand(query, conn);
 
@@ -174,28 +158,19 @@ namespace Shoprite.carts
             sales.DataContext = dt;
         }
 
-        private void close_till(object sender, RoutedEventArgs e)
+        private void record_till(object sender, RoutedEventArgs e)
         {
-            String txt = MainWindow.instance.txtUsername.Text;
-            String start = MainWindow.instance.startDate.ToString();
+            String txt = Admin.instace.txtUsername.Text;
 
-            DateTime closeDate = DateTime.Now;
-            string close = closeDate.ToString();
+            MessageBox.Show(txt);
 
-            conn.Open();
-            String query = $"INSERT INTO `tills`(`id`, `username`, `open`, `closed`) VALUES ('','{txt}','{start}','{close}')";
-            MySqlCommand cmd = new MySqlCommand(query, conn);
-            int value = cmd.ExecuteNonQuery();
-            MessageBox.Show($"Till succesfully closed sale recorded successfully ");
-            conn.Close();
 
-            this.Close();
-            Shop home = new Shop();
-            home.Show();
+        }
 
-            /// string close = closeDate.ToString("yyyy-MM-dd");
+        private void sales_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
 
-            ///MessageBox.Show($"{txt} with start date {start} and closed date of {close}");
         }
     }
 }
+

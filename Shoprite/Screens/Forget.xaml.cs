@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MaterialDesignThemes.Wpf;
+using MySql.Data.MySqlClient;
 
 namespace Shoprite.Screens
 {
@@ -21,8 +22,24 @@ namespace Shoprite.Screens
     /// </summary>
     public partial class Forget : Window
     {
+
+        private MySqlConnection conn;
+        private string server;
+        private string database;
+        private string uid;
+        private string password;
+
         public Forget()
         {
+
+            server = "localhost";
+            database = "shoprite";
+            uid = "root";
+            password = "";
+
+            String connString = $"SERVER={server};DATABASE={database};UID={uid};PASSWORD={password};";
+
+            conn = new MySqlConnection(connString);
             InitializeComponent();
         }
 
@@ -64,6 +81,27 @@ namespace Shoprite.Screens
             this.Hide();
             MainWindow home = new MainWindow();
             home.Show();
+        }
+
+        private void reset(object sender, RoutedEventArgs e)
+        {
+
+            string user = txtUsername.Text;
+            string pass = txtPassword.Password;
+            
+
+
+            conn.Open();
+            string query = $" UPDATE `users` SET `password`= '{pass}' WHERE `username`= '{user}'";
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show($"Passsword reset SUCCESSFULLY");
+            conn.Close();
+
+
+            txtPassword.Password = "";
+            txtUsername.Text = "";
+           
         }
     }
 }

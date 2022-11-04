@@ -47,3 +47,5 @@ C:\Users\CODED\source\repos\Shoprite\Shoprite\bin\Debug\MySql.Data.xml
 C:\Users\CODED\source\repos\Shoprite\Shoprite\obj\Debug\Shoprite.exe.config
 C:\Users\CODED\source\repos\Shoprite\Shoprite\obj\Debug\Screens\AdminScreen.g.cs
 C:\Users\CODED\source\repos\Shoprite\Shoprite\obj\Debug\Screens\AdminScreen.baml
+C:\Users\CODED\source\repos\Shoprite\Shoprite\obj\Debug\carts\Tills.g.cs
+C:\Users\CODED\source\repos\Shoprite\Shoprite\obj\Debug\carts\Tills.baml

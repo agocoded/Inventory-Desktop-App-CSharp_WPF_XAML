@@ -20,8 +20,14 @@ namespace Shoprite
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    /// 
+    
     public partial class MainWindow : Window
     {
+
+        public static MainWindow instance;
+        public TextBox textBox;
+        public DateTime startDate;
 
         /// <summary>
         /// initializing all variables needed for mysql conn
@@ -46,6 +52,11 @@ namespace Shoprite
 
 
             InitializeComponent();
+
+            instance = this;
+            textBox = txtUsername;
+            startDate = DateTime.Now;
+
         }
 
 
